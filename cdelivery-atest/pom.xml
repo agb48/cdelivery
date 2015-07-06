@@ -24,13 +24,4 @@
         </plugins>
     </build>
 
-    <profiles>
-        <profile>
-            <id>atest</id>
-            <properties>
-                <skipTests>false</skipTests>
-            </properties>
-        </profile>
-    </profiles>
-
 </project>
