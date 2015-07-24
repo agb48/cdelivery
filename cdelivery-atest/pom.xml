@@ -12,6 +12,7 @@
     <artifactId>cdelivery-atest</artifactId>
 
     <build>
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
