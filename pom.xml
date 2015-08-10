@@ -5,7 +5,7 @@
     <groupId>com.testing</groupId>
     <artifactId>cdelivery</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-RC-SNAPSHOT</version>
+    <version>1.0</version>
 
     <modules>
         <module>cdelivery-main</module>
