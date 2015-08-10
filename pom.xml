@@ -53,8 +53,8 @@
                     <allowUntracked>false</allowUntracked>
                     <autoVersionSubmodules>true</autoVersionSubmodules>
                     <releaseBranchVersionSuffix>RC</releaseBranchVersionSuffix>
-                    <pushReleases>true</pushReleases>
-                    <noDeploy>false</noDeploy>
+                    <pushReleases>false</pushReleases>
+                    <noDeploy>true</noDeploy>
                     <enableSshAgent>true</enableSshAgent>
                 </configuration>
             </plugin>
