@@ -20,6 +20,11 @@
         <version>1.2.4.RELEASE</version>
     </parent>
 
+    <properties>
+        <skipTests>true</skipTests>
+        <jgitflow.version>1.0-m5.1</jgitflow.version>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
@@ -30,12 +35,32 @@
                     <!-- put your configurations here -->
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>external.atlassian.jgitflow</groupId>
+                <artifactId>jgitflow-maven-plugin</artifactId>
+                <version>${jgitflow.version}</version>
+                <configuration>
+                    <flowInitContext>
+                        <masterBranchName>master</masterBranchName>
+                        <developBranchName>develop</developBranchName>
+                        <featureBranchPrefix>feature/</featureBranchPrefix>
+                        <releaseBranchPrefix>release/</releaseBranchPrefix>
+                        <hotfixBranchPrefix>hotfix/</hotfixBranchPrefix>
+                    </flowInitContext>
+                    <allowSnapshots>false</allowSnapshots>
+                    <allowUntracked>false</allowUntracked>
+                    <pushFeatures>true</pushFeatures>
+                    <allowUntracked>false</allowUntracked>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <releaseBranchVersionSuffix>RC</releaseBranchVersionSuffix>
+                    <pushReleases>true</pushReleases>
+                    <noDeploy>false</noDeploy>
+                    <enableSshAgent>true</enableSshAgent>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
-
-    <properties>
-        <skipTests>true</skipTests>
-    </properties>
 
     <dependencies>
         <dependency>
@@ -70,6 +95,5 @@
             </properties>
         </profile>
     </profiles>
-
 
 </project>
